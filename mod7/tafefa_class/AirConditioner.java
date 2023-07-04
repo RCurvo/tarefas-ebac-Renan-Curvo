@@ -1,4 +1,8 @@
 public class AirConditioner {
+    /**
+     * @author rcurvo
+     * @param args
+     */
 
     public static void main(String[] args){
 AirConditioner airConditioner = new AirConditioner();
@@ -11,6 +15,9 @@ AirConditioner airConditioner = new AirConditioner();
 
     }
 
+    private int voltage;
+    private int temperature;
+    private String color;
     public void setVoltage(int voltage) {
         this.voltage = voltage;
     }
@@ -23,9 +30,7 @@ AirConditioner airConditioner = new AirConditioner();
         this.color = color;
     }
 
-    private int voltage;
-    private int temperature;
-    private String color;
+
 
     public int getVoltage() {
         return voltage;
