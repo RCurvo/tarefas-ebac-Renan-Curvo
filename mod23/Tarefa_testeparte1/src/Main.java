@@ -5,6 +5,11 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Main {
+    public static List<String[]> getFemales() {
+        return females;
+    }
+
+    private static List<String[]> females = new ArrayList<>();
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -20,7 +25,7 @@ public class Main {
             nameAndSex.add(p.split("-"));
         });
 
-        List<String[]> females = nameAndSex.stream().filter(person -> "f".equals(person[1].toLowerCase()))
+        females = nameAndSex.stream().filter(person -> "f".equals(person[1].toLowerCase()))
                 .collect(Collectors.toList());
         System.out.println("*********************************MULHERES*************************************");
         females.stream().forEach(female -> System.out.println(female[0]));
